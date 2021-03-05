@@ -9,14 +9,14 @@ import ro.ase.acs.writers.Writeable;
 public class Main {
 
 	public static void main(String[] args) {
-		IoC io = new IoC();
-		io.register(Readable.class, ConsoleReader.class);
-		io.register(Writeable.class, ConsoleWriter.class);
+		IoC ioc = new IoC();
+		ioc.register(Readable.class, ConsoleReader.class);
+		ioc.register(Writeable.class, ConsoleWriter.class);
 		
-		Readable r = (Readable)io.resolve(Readable.class);
-		Writeable w = (Writeable)io.resolve(Writeable.class);
+		Readable reader = (Readable)ioc.resolve(Readable.class);
+		Writeable writer = (Writeable)ioc.resolve(Writeable.class);
 		
-		Orchestrator orchestrator = new Orchestrator(r,w,io);
+		Orchestrator orchestrator = new Orchestrator(reader,writer,ioc);
 		orchestrator.execute();
 	}
 
