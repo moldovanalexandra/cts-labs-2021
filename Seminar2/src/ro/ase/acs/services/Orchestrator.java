@@ -9,11 +9,6 @@ public class Orchestrator {
 	private Writeable writer;
 	private IoC ioc;
 	
-
-	public Orchestrator(Readable reader, Writeable writer){
-        this.reader = reader;
-        this.writer = writer;
-    }
 	
 	public Orchestrator(Readable reader, Writeable writer, IoC ioc){
 	        this.reader = reader;
