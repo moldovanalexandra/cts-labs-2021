@@ -16,8 +16,7 @@ public class ConsoleReader implements Closeable, Readable{
 
 	@Override
 	public void close() throws IOException {
-		scanner.close();
-		
+		scanner.close();	
 	}
 
 }

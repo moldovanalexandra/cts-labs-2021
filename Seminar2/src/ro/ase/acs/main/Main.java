@@ -18,8 +18,6 @@ public class Main {
 		
 		Orchestrator orchestrator = new Orchestrator(r,w,io);
 		orchestrator.execute();
-	
-		
 	}
 
 	
