@@ -11,7 +11,7 @@ private:
 	char* producator;
 protected:
 	const int id;
-	static int nrMot; //1)nrMot - nume care poate creea ambiguitate (se poate interpreta ca numar de inmatriculare) -> SOLUTIE: numarMotociclete; 
+	static int nrMot; //1)nrMot - nume care poate crea ambiguitate (se poate interpreta ca numar de inmatriculare) -> SOLUTIE: numarMotociclete; 
 	string model;
 	float capacitate;
 public:
