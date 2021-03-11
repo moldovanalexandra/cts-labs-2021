@@ -8,9 +8,9 @@ public class Instrument implements Evaluabil {
     private String simbol;
     private String nume;
     private double pret;
-    private Status stare;
+    private String stare;
 
-    public Instrument(String simbol, String nume, double pret, Status stare) {
+    public Instrument(String simbol, String nume, double pret, String stare) {
         this.simbol = simbol;
         this.nume = nume;
         this.pret = pret;
@@ -21,7 +21,7 @@ public class Instrument implements Evaluabil {
         this.simbol = null;
         this.nume = null;
         this.pret = 0.0F;
-        this.stare = Status.NECUNOSCUT;
+        this.stare = "necunoscuta";
     }
 
     public String getSimbol() {
@@ -48,11 +48,11 @@ public class Instrument implements Evaluabil {
         this.pret = pret;
     }
 
-    public Status getStare() {
+    public String getStare() {
         return stare;
     }
 
-    public void setStare(Status stare) {
+    public void setStare(String stare) {
         this.stare = stare;
     }
 
@@ -68,22 +68,8 @@ public class Instrument implements Evaluabil {
         local.setSimbol(lineScanner.next());
         local.setNume(lineScanner.next());
         local.setPret(lineScanner.nextDouble());
-        local.setStare(Status.valueOf(lineScanner.next()));
+        local.setStare((lineScanner.next()));
 
         return local;
-    }
-
-    @Override
-    public String toString() {
-//        return "Instrument{" +
-//                "simbol='" + simbol + '\'' +
-//                ", nume='" + nume + '\'' +
-//                ", pret=" + pret +
-//                '}';
-        return this.getClass().getName() + "," +
-                this.simbol + "," +
-                this.nume + "," +
-                Double.toString(this.pret) + "," +
-                stare.toString();
     }
 }

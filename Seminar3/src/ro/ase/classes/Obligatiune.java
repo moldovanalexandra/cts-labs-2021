@@ -8,7 +8,7 @@ import ro.ase.interfaces.Evaluabil;
 public class Obligatiune extends Instrument implements Evaluabil, Actualizabil {
     private float cupon;
 
-    public Obligatiune(String simbol, String nume, double pret, Status stare, float cupon) {
+    public Obligatiune(String simbol, String nume, double pret, String stare, float cupon) {
         super(simbol, nume, pret, stare);
         this.cupon = cupon;
     }
@@ -43,22 +43,10 @@ public class Obligatiune extends Instrument implements Evaluabil, Actualizabil {
         local.setSimbol(lineScanner.next());
         local.setNume(lineScanner.next());
         local.setPret(lineScanner.nextDouble());
-        local.setStare(Status.valueOf(lineScanner.next()));
+        local.setStare(lineScanner.next());
         local.setCupon(lineScanner.nextFloat());
 
         return local;
     }
 
-    @Override
-    public String toString() {
-//        return "Obligatiune{" +
-//                "cupon=" + cupon +
-//                '}';
-        return this.getClass().getName() + "," +
-                this.getSimbol() + "," +
-                this.getNume() + "," +
-                Double.toString(this.getPret()) + "," +
-                this.getStare().valoare.toString() + "," +
-                this.cupon;
-    }
 }
