@@ -1,0 +1,12 @@
+package ro.ase.acs.classes;
+
+public class Sum implements Operation{
+    @Override
+    public long applyOperation(Integer[] array) {
+        long sum = 0;
+        for(int i = 0; i < array.length; i++){
+            sum += array[i];
+        }
+        return sum;
+    }
+}
