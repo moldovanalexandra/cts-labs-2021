@@ -1,3 +1,3 @@
 # cts-labs-2021
 
-Teme Seminar
+Teme si exemple de la curs sau seminar
